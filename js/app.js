@@ -1,115 +1,46 @@
-// BankDash Custom JavaScript
+// Active menu handling
+document.addEventListener('DOMContentLoaded', function () {
+    const navItems = document.querySelectorAll('.nav-item');
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize tooltips
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    var tooltipList = tooltipTriggerList.map(function(tooltipTriggerEl) {
-        return new bootstrap.Tooltip(tooltipTriggerEl);
-    });
-
-    // Add smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
+    navItems.forEach(item => {
+        item.addEventListener('click', function (e) {
             e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+
+            // Remove active from all
+            navItems.forEach(el => {
+                el.classList.remove('active');
+                const link = el.querySelector('.nav-link');
+                if (link) link.classList.remove('active');
+            });
+
+            // Add active to clicked
+            this.classList.add('active');
+            const clickedLink = this.querySelector('.nav-link');
+            if (clickedLink) clickedLink.classList.add('active');
         });
     });
 
-    // Header notification bell animation
-    const bellIcon = document.querySelector('.fa-bell');
-    if (bellIcon) {
-        setInterval(() => {
-            bellIcon.style.transform = 'rotate(15deg)';
-            setTimeout(() => {
-                bellIcon.style.transform = 'rotate(0deg)';
-            }, 200);
-        }, 5000);
+    // Set Credit Cards as default active
+    const creditCardsItem = document.querySelector('.nav-item:nth-child(5)');
+    if (creditCardsItem) {
+        creditCardsItem.classList.add('active');
+        const link = creditCardsItem.querySelector('.nav-link');
+        if (link) link.classList.add('active');
     }
 
-    // Credit card hover effect enhancement
-    const creditCards = document.querySelectorAll('.credit-card');
-    creditCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-        });
-    });
-
-    // Form validation for Add Card
-    const addCardForm = document.querySelector('.add-card-section form');
-    if (addCardForm) {
-        addCardForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Simple validation
-            const cardNumber = this.querySelector('input[placeholder="**** **** **** ****"]');
-            const cardName = this.querySelector('input[value="My Cards"]');
-            
-            if (cardNumber && cardNumber.value.trim() === '') {
-                alert('Please enter card number');
-                return;
-            }
-            
-            alert('Card added successfully! (Demo)');
+    // Form submission
+    const addCardBtn = document.querySelector('.btn-add-card');
+    if (addCardBtn) {
+        addCardBtn.addEventListener('click', function () {
+            alert('Card added successfully!');
         });
     }
 
-    // Setting items hover effect
-    const settingItems = document.querySelectorAll('.setting-item');
-    settingItems.forEach(item => {
-        item.addEventListener('mouseenter', function() {
-            this.style.backgroundColor = '#f8f9fa';
-            this.style.padding = '1rem';
-            this.style.margin = '-1rem -1rem 0 -1rem';
-            this.style.borderRadius = '12px';
-        });
-        
-        item.addEventListener('mouseleave', function() {
-            this.style.backgroundColor = '';
-            this.style.padding = '';
-            this.style.margin = '';
-            this.style.borderRadius = '';
-        });
-    });
-
-    // Responsive table handling
-    function handleTableResponsive() {
-        const tables = document.querySelectorAll('.table');
-        tables.forEach(table => {
-            const wrapper = table.parentElement;
-            if (window.innerWidth < 768 && !wrapper.classList.contains('table-responsive')) {
-                wrapper.classList.add('table-responsive');
-            } else if (window.innerWidth >= 768 && wrapper.classList.contains('table-responsive')) {
-                wrapper.classList.remove('table-responsive');
-            }
+    // Search
+    const searchInput = document.querySelector('.search-input');
+    if (searchInput) {
+        searchInput.addEventListener('input', function (e) {
+            console.log('Searching:', e.target.value);
         });
     }
-
-    // Run on load and resize
-    handleTableResponsive();
-    window.addEventListener('resize', handleTableResponsive);
-
-    // Interactive chart placeholder (demo)
-    const chartPlaceholder = document.querySelector('.pie-chart i');
-    if (chartPlaceholder) {
-        chartPlaceholder.addEventListener('mouseenter', function() {
-            this.style.color = '#0d6efd';
-            this.style.transition = 'color 0.3s';
-        });
-        
-        chartPlaceholder.addEventListener('mouseleave', function() {
-            this.style.color = '#e9ecef';
-        });
-    }
-
-    console.log('BankDash application loaded successfully');
 });
