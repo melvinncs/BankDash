@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BankDash - Setting</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <!-- Sidebar -->
+            <div class="col-auto">
+                <aside class="sidebar p-4">
+                    <div class="logo d-flex align-items-center gap-2 mb-5 ms-3">
+                        <img src="img/logo.png" alt="BankDash">
+                        <span>Bankku.</span>
+                    </div>
+                    <nav>
+                        <ul class="nav flex-column w-100 gap-1">
+                            <li class="nav-item w-100">
+                                <a href="#" class="nav-link">
+                                    <img src="img/dashboard.png" class="nav-icon" alt="Dashboard">
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="nav-item w-100">
+                                <a href="#" class="nav-link">
+                                    <img src="img/transaction.png" class="nav-icon" alt="Transactions">
+                                    <span>Transactions</span>
+                                </a>
+                            </li>
+                            <li class="nav-item w-100">
+                                <a href="#" class="nav-link">
+                                    <img src="img/account.png" class="nav-icon" alt="Accounts">
+                                    <span>Accounts</span>
+                                </a>
+                            </li>
+                            <li class="nav-item w-100">
+                                <a href="#" class="nav-link">
+                                    <img src="img/investment.png" class="nav-icon" alt="Investments">
+                                    <span>Investments</span>
+                                </a>
+                            </li>
+                            <li class="nav-item w-100">
+                                <a href="index.html" class="nav-link">
+                                    <img src="img/credit-card.png" class="nav-icon" alt="Credit Cards">
+                                    <span>Credit Cards</span>
+                                </a>
+                            </li>
+                            <li class="nav-item w-100">
+                                <a href="#" class="nav-link">
+                                    <img src="img/loan.png" class="nav-icon" alt="Loans">
+                                    <span>Loans</span>
+                                </a>
+                            </li>
+                            <li class="nav-item w-100">
+                                <a href="service.html" class="nav-link">
+                                    <img src="img/service.png" class="nav-icon" alt="Services">
+                                    <span>Services</span>
+                                </a>
+                            </li>
+                            <li class="nav-item w-100">
+                                <a href="#" class="nav-link">
+                                    <img src="img/privilege.png" class="nav-icon" alt="My Privileges">
+                                    <span>My Privileges</span>
+                                </a>
+                            </li>
+                            <li class="nav-item w-100 active">
+                                <a href="setting.html" class="nav-link active">
+                                    <img src="img/setting.png" class="nav-icon" alt="Setting">
+                                    <span>Setting</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </aside>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col">
+                <main class="main-content">
+                    <!-- Topbar -->
+                    <header class="topbar">
+                        <div class="mobile-menu">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                        <h2 class="page-title">Setting</h2>
+                            <div class="d-flex align-items-center gap-3">
+                            <div class="search-box">
+                                <img src="img/search.png" class="search-icon" alt="Search">
+                                <input type="text" class="search-input" placeholder="Search for something">
+                            </div>
+                            <div class="topbar-icon">
+                                <img src="img/settings.png" alt="Settings">
+                            </div>
+                            <div class="topbar-icon bell">
+                                <img src="img/notification.png" alt="Notification">
+                            </div>
+                            <img src="img/profile.png" class="profile-img" alt="Profile">
+                        </div>
+                    </header>
+                    
+                    <!-- Content -->
+                    <div class="content-body">
+                        <div class="setting-card">
+                            <!-- Setting Tabs -->
+                            <div class="setting-tabs">
+                                <button class="setting-tab active" data-tab="edit-profile">Edit Profile</button>
+                                <button class="setting-tab" data-tab="preferences">Preferences</button>
+                                <button class="setting-tab" data-tab="security">Security</button>
+                            </div>
+
+                            <!-- Edit Profile Tab -->
+                            <div id="edit-profile" class="tab-content">
+                                <div class="profile-section">
+                                    <div class="profile-avatar">
+                                        <img src="img/profiles.png" alt="Profile">
+                                        <div class="pencil-icon">
+                                            <img src="img/pencil.png" alt="Edit">
+                                        </div>
+                                    </div>
+                                    <div class="profile-form">
+                                        <div class="form-group">
+                                            <label>Your Name</label>
+                                            <input type="text" value="Charlene Reed">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>User Name</label>
+                                            <input type="text" value="Charlene Reed">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Email</label>
+                                            <input type="email" value="charlenereed@gmail.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Password</label>
+                                            <input type="password" value="**********">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Date of Birth</label>
+                                            <div class="input-icon">
+                                                <input type="text" value="25 January 1990">
+                                                <i class="fa-solid fa-chevron-down"></i>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Present Address</label>
+                                            <input type="text" value="San Jose, California, USA">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Permanent Address</label>
+                                            <input type="text" value="San Jose, California, USA">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>City</label>
+                                            <input type="text" value="San Jose">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Postal Code</label>
+                                            <input type="text" value="45962">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Country</label>
+                                            <input type="text" value="USA">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Preference Tab -->
+                            <div id="preferences" class="tab-content hidden">
+                                <div class="preferences-list">
+                                    <div class="pref-row">
+                                        <div class="pref-col">
+                                            <label>Currency</label>
+                                            <input type="text" value="USD">
+                                        </div>
+                                        <div class="pref-col">
+                                            <label>Time Zone</label>
+                                            <input type="text" value="(GMT-12:00) International Date Line West">
+                                        </div>
+                                    </div>
+                                    <!-- Notification -->
+                                    <div class="notification-section">
+                                        <h4>Notification</h4>
+                                        <div class="notif-item">
+                                            <div class="toggle-switch active">
+                                                <div class="toggle-knob"></div>
+                                            </div>
+                                            <span>I send or receive digital currency</span>
+                                        </div>
+                                        <div class="notif-item">
+                                            <div class="toggle-switch">
+                                                <div class="toggle-knob"></div>
+                                            </div>
+                                            <span>I receive merchant order</span>
+                                        </div>
+                                        <div class="notif-item">
+                                            <div class="toggle-switch active">
+                                                <div class="toggle-knob"></div>
+                                            </div>
+                                            <span>There are recommendation for my account</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Security Tab -->
+                            <div id="security" class="tab-content hidden">
+                                <div class="security-box">
+                                    <div class="security-item">
+                                        <h4>Two-factor Authentication</h4>
+                                        <div class="two-factor-row">
+                                            <div class="toggle-switch active">
+                                                <div class="toggle-knob"></div>
+                                            </div>
+                                            <p>Enable or disable two factor authentication</p>
+                                        </div>
+                                    </div>
+                                    <div class="security-item">
+                                        <h4>Change Password</h4>
+                                        <label>Current Password</label>
+                                        <input type="password" class="password-field" value="**********">
+                                    </div>
+                                    <div class="security-item">
+                                        <h4>New Password</h4>
+                                        <input type="password" class="password-field" value="**********">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end mt-4">
+                                <button class="btn-save">Save</button>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+        </div>
+
+    <script src="js/app.js"></script>
+    <script>
+        // Tab switching functionality
+        const tabs = document.querySelectorAll('.setting-tab');
+        const contents = {
+            'edit-profile': document.getElementById('edit-profile'),
+            'preferences': document.getElementById('preferences'),
+            'security': document.getElementById('security')
+        };
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Remove active class from all tabs
+                tabs.forEach(t => t.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                // Hide all contents
+                Object.values(contents).forEach(content => content.classList.add('hidden'));
+                
+                // Show selected content
+                const tabName = tab.getAttribute('data-tab');
+                if (contents[tabName]) {
+                    contents[tabName].classList.remove('hidden');
+                }
+            });
+        });
+
+        // Toggle switch functionality
+        document.querySelectorAll('.toggle-switch').forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggle.classList.toggle('active');
+            });
+        });
+
+        // Save button alert (optional)
+        document.querySelector('.btn-save').addEventListener('click', () => {
+            alert('Settings saved successfully!');
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
