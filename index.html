@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BankDash</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 sidebar">
+                <div class="sidebar-header">
+                    <h3>BankDash</h3>
+                </div>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-credit-card"></i> Credit Cards
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-9 col-lg-10 main-content">
+                <!-- Header -->
+                <div class="header">
+                    <h2>Credit Cards</h2>
+                    <div class="header-right">
+                        <i class="fas fa-bell"></i>
+                        <div class="user-profile">
+                            <img src="https://ui-avatars.com/api/?name=Eddy+Cosma&background=0D6EFD&color=fff" alt="Profile">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My Cards Section -->
+                <div class="my-cards-section">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4>My Cards</h4>
+                        <a href="#" class="see-all">See All</a>
+                    </div>
+                    <div class="row">
+                        <!-- Card 1 -->
+                        <div class="col-md-4 mb-3">
+                            <div class="credit-card dark">
+                                <div class="card-header">
+                                    <span class="balance-label">Balance</span>
+                                    <span class="card-type">VISA</span>
+                                </div>
+                                <div class="card-balance">$5,756</div>
+                                <div class="card-details">
+                                    <div class="card-holder">
+                                        <span class="label">CARD HOLDER</span>
+                                        <span class="value">Eddy Cosma</span>
+                                    </div>
+                                    <div class="valid-thru">
+                                        <span class="label">VALID THRU</span>
+                                        <span class="value">12/22</span>
+                                    </div>
+                                </div>
+                                <div class="card-number">3778 **** **** 1234</div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col-md-4 mb-3">
+                            <div class="credit-card light">
+                                <div class="card-header">
+                                    <span class="balance-label">Balance</span>
+                                    <span class="card-type">MASTERCARD</span>
+                                </div>
+                                <div class="card-balance">$5,756</div>
+                                <div class="card-details">
+                                    <div class="card-holder">
+                                        <span class="label">CARD HOLDER</span>
+                                        <span class="value">Eddy Cosma</span>
+                                    </div>
+                                    <div class="valid-thru">
+                                        <span class="label">VALID THRU</span>
+                                        <span class="value">12/22</span>
+                                    </div>
+                                </div>
+                                <div class="card-number">3778 **** **** 1234</div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col-md-4 mb-3">
+                            <div class="credit-card dark">
+                                <div class="card-header">
+                                    <span class="balance-label">Balance</span>
+                                    <span class="card-type">AMEX</span>
+                                </div>
+                                <div class="card-balance">$5,756</div>
+                                <div class="card-details">
+                                    <div class="card-holder">
+                                        <span class="label">CARD HOLDER</span>
+                                        <span class="value">Eddy Cosma</span>
+                                    </div>
+                                    <div class="valid-thru">
+                                        <span class="label">VALID THRU</span>
+                                        <span class="value">12/22</span>
+                                    </div>
+                                </div>
+                                <div class="card-number">3778 **** **** 1234</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Statistics and Card List Row -->
+                <div class="row">
+                    <!-- Expense Statistics -->
+                    <div class="col-md-5 mb-4">
+                        <div class="statistics-card">
+                            <h4>Card Expense Statistics</h4>
+                            <div class="statistics-chart">
+                                <div class="chart-placeholder">
+                                    <div class="stat-item">
+                                        <span class="dot blue"></span> Dollar Bank <span class="percentage">30%</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="dot green"></span> ERC Bank <span class="percentage">25%</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="dot yellow"></span> ASM Bank <span class="percentage">20%</span>
+                                    </div>
+                                    <div class="stat-item">
+                                        <span class="dot red"></span> MCP Bank <span class="percentage">25%</span>
+                                    </div>
+                                </div>
+                                <div class="pie-chart">
+                                    <i class="fas fa-chart-pie"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card List -->
+                    <div class="col-md-7 mb-4">
+                        <div class="card-list-section">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4>Card List</h4>
+                                <a href="#" class="see-all">See All</a>
+                            </div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Card Type</th>
+                                        <th>Bank</th>
+                                        <th>Card Number</th>
+                                        <th>Name on Card</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="badge-secondary">Secondary</span></td>
+                                        <td>DBL Bank</td>
+                                        <td>**** 5600</td>
+                                        <td>William</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="badge-secondary">Secondary</span></td>
+                                        <td>BRC Bank</td>
+                                        <td>**** 4300</td>
+                                        <td>Michael</td>
+                                    </tr>
+                                    <tr>
+                                        <td><span class="badge-secondary">Secondary</span></td>
+                                        <td>ASM Bank</td>
+                                        <td>**** 7960</td>
+                                        <td>Edward</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add New Card and Card Setting Row -->
+                <div class="row">
+                    <!-- Add New Card -->
+                    <div class="col-md-7 mb-4">
+                        <div class="add-card-section">
+                            <h4>Add New Card</h4>
+                            <p class="text-muted">Credit Card generally means a plastic card issued by Scheduled Commercial Bank assigned to a Cardholder, with a credit limit.</p>
+                            
+                            <form>
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Card Type</label>
+                                        <select class="form-control">
+                                            <option>Classic</option>
+                                            <option>Gold</option>
+                                            <option>Platinum</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Name On Card</label>
+                                        <input type="text" class="form-control" value="My Cards">
+                                    </div>
+                                </div>
+                                
+                                <div class="row mb-3">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Card Number</label>
+                                        <input type="text" class="form-control" placeholder="**** **** **** ****">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Expiration Date</label>
+                                        <input type="text" class="form-control" value="25 January 2025">
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary">Add Card</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Card Setting -->
+                    <div class="col-md-5 mb-4">
+                        <div class="card-setting-section">
+                            <h4>Card Setting</h4>
+                            <div class="setting-items">
+                                <div class="setting-item">
+                                    <div>
+                                        <i class="fas fa-ban"></i>
+                                        <strong>Block Card</strong>
+                                    </div>
+                                    <p>Insanity block your card</p>
+                                </div>
+                                <div class="setting-item">
+                                    <div>
+                                        <i class="fas fa-key"></i>
+                                        <strong>Change Pin Code</strong>
+                                    </div>
+                                    <p>Choose another pin code</p>
+                                </div>
+                                <div class="setting-item">
+                                    <div>
+                                        <i class="fab fa-google-pay"></i>
+                                        <strong>Add to Google Pay</strong>
+                                    </div>
+                                    <p>Withdraw without any card</p>
+                                </div>
+                                <div class="setting-item">
+                                    <div>
+                                        <i class="fab fa-apple-pay"></i>
+                                        <strong>Add to Apple Pay</strong>
+                                    </div>
+                                    <p>Withdraw without any card</p>
+                                </div>
+                                <div class="setting-item">
+                                    <div>
+                                        <i class="fab fa-apple"></i>
+                                        <strong>Add to Apple Store</strong>
+                                    </div>
+                                    <p>Withdraw without any card</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="{{ asset('js/app.js') }}"></script>
+</body>
+</html>
