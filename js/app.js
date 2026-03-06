@@ -64,4 +64,11 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Settings saved successfully!');
         });
     }
+
+    const menu = document.querySelector(".mobile-menu");
+    const sidebar = document.querySelector(".sidebar");
+
+    menu.addEventListener("click", () => {
+        sidebar.classList.toggle("show");
+    });
 });
