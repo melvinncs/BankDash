@@ -242,49 +242,6 @@
         </div>
 
     <script src="js/app.js"></script>
-    <script>
-        // Tab switching functionality
-        const tabs = document.querySelectorAll('.setting-tab');
-        const contents = {
-            'edit-profile': document.getElementById('edit-profile'),
-            'preferences': document.getElementById('preferences'),
-            'security': document.getElementById('security')
-        };
-
-        tabs.forEach(tab => {
-            tab.addEventListener('click', (e) => {
-                e.preventDefault();
-                
-                // Remove active class from all tabs
-                tabs.forEach(t => t.classList.remove('active'));
-                
-                // Add active class to clicked tab
-                tab.classList.add('active');
-                
-                // Hide all contents
-                Object.values(contents).forEach(content => content.classList.add('hidden'));
-                
-                // Show selected content
-                const tabName = tab.getAttribute('data-tab');
-                if (contents[tabName]) {
-                    contents[tabName].classList.remove('hidden');
-                }
-            });
-        });
-
-        // Toggle switch functionality
-        document.querySelectorAll('.toggle-switch').forEach(toggle => {
-            toggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                toggle.classList.toggle('active');
-            });
-        });
-
-        // Save button alert (optional)
-        document.querySelector('.btn-save').addEventListener('click', () => {
-            alert('Settings saved successfully!');
-        });
-    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
