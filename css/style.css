@@ -1125,7 +1125,7 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
     }
 
     /* Card List */
-    .card-list-item {
+     .card-list-item {
         padding: 16px;
     }
     
@@ -1136,6 +1136,8 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
     }
     
     .card-list-item .d-flex.align-items-center.gap-4 {
+        display: flex;
+        align-items: center !important;
         gap: 12px !important;
         flex-wrap: nowrap !important;
         flex: 1;
@@ -1148,38 +1150,69 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
     .card-list-item .d-flex.align-items-center.gap-4 > div:nth-child(1),
     .card-list-item .d-flex.align-items-center.gap-4 > div:nth-child(2),
     .card-list-item .d-flex.align-items-center.gap-4 > div:nth-child(3) {
-        display: block;
+        display: flex;
     }
 
     .card-list-item .fw-semibold {
         font-size: 11px;
         white-space: nowrap;
+        line-height: 1.2;
+        margin-bottom: 2px;
     }
     
     .card-type-sub {
         font-size: 10px;
         white-space: nowrap;
+        line-height: 1.2;
     }
 
-     .card-icon-circle {
-        width: 32px;
-        height: 32px;
+    .card-icon-circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        margin: 0;
+        padding: 0;
     }
     
     .card-icon-circle img {
-        width: 16px !important;
+        width: 20px;
+        height: 20px;
+        display: block;
+        object-fit: contain;
     }
 
     .view-details-link {
         font-size: 11px;
         white-space: nowrap;
         margin-left: auto;
+        display: flex;
+        align-items: center;
+        height: 40px;
+        padding: 0 4px;
     }
+
 
     .card-list-item .d-flex.align-items-center.gap-4 {
         flex-wrap: nowrap !important;
-        overflow-x: auto;
-        padding-bottom: 2px;
+    }
+
+    .card-list-item .d-flex.align-items-center.justify-content-between {
+        align-items: center !important;
+    }
+
+    .card-list-item .d-flex.align-items-center.gap-4 > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 40px;
+    }
+
+    .card-list-item .d-flex.align-items-center.gap-4 > div:not(:first-child):not(:nth-child(2)):not(:nth-child(3)) {
+        display: none;
     }
 
     .card-list-item .d-flex.align-items-center.gap-4::-webkit-scrollbar {
