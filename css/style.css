@@ -463,12 +463,18 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
     color: #718EBF;
 }
 
-/* SERVICE PAGE STYLES */
+/* Sservice Page */
 .service-box {
     background: #fff;
     border-radius: 16px;
     padding: 20px;
     gap: 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.service-box:hover {
+    transform: translateY(-4px);
 }
 
 .service-icon {
