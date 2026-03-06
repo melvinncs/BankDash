@@ -985,7 +985,6 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
     .sidebar {
         width: 80px;
     }
-    .logo span,
     .nav-link span {
         display: none;
     }
