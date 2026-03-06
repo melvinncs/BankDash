@@ -1096,34 +1096,41 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
 
     /* Card List */
     .card-list-table .d-flex {
-        flex-direction: row;
+        flex-direction: row !important;
         align-items: center !important;
+        flex-wrap: nowrap !important;
         justify-content: space-between;
         gap: 12px;
     }
 
-    .card-list-table .d-flex > div {
-        width: auto;
-    }
-
     .card-list-table .d-flex .d-flex {
-        flex-direction: row;
-        align-items: center;
-        gap: 14px;
-        flex-wrap: wrap;
+        flex-wrap: nowrap !important;
+        gap: 16px;
     }
 
-    .card-list-table .fw-semibold {
-        font-size: 13px;
+    .card-list-table .d-flex .d-flex > div {
+        min-width: max-content;
     }
 
-    .card-type-sub {
-        font-size: 12px;
+    .card-list-table .fw-semibold{
+        font-size:12px;
     }
 
-    .view-details-link {
-        font-size: 13px;
+    .card-type-sub{
+        font-size:11px;
+    }
+
+    .view-details-link{
         white-space: nowrap;
+        font-size:12px;
+    }
+
+    .card-list-table{
+        overflow-x:auto;
+    }
+
+    .card-list-table::-webkit-scrollbar{
+        display:none;
     }
 
     /* Service */
