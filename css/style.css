@@ -1040,7 +1040,6 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
 }
 
 @media (max-width: 768px) {
-
     .sidebar {
         display: none;
     }
@@ -1126,42 +1125,65 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
     }
 
     /* Card List */
-    .card-list-table .d-flex {
+    .card-list-item {
+        padding: 16px;
+    }
+    
+    .card-list-item .d-flex {
         flex-direction: row !important;
         align-items: center !important;
-        flex-wrap: nowrap !important;
-        justify-content: space-between;
         gap: 12px;
     }
-
-    .card-list-table .d-flex .d-flex {
+    
+    .card-list-item .d-flex.align-items-center.gap-4 {
+        gap: 12px !important;
         flex-wrap: nowrap !important;
-        gap: 16px;
+        flex: 1;
     }
 
-    .card-list-table .d-flex .d-flex > div {
-        min-width: max-content;
+    .card-list-item .d-flex.align-items-center.gap-4 > div:not(:first-child):not(:nth-child(2)):not(:nth-child(3)) {
+        display: none;
     }
 
-    .card-list-table .fw-semibold{
-        font-size:12px;
+    .card-list-item .d-flex.align-items-center.gap-4 > div:nth-child(1),
+    .card-list-item .d-flex.align-items-center.gap-4 > div:nth-child(2),
+    .card-list-item .d-flex.align-items-center.gap-4 > div:nth-child(3) {
+        display: block;
     }
 
-    .card-type-sub{
-        font-size:11px;
-    }
-
-    .view-details-link{
+    .card-list-item .fw-semibold {
+        font-size: 11px;
         white-space: nowrap;
-        font-size:12px;
+    }
+    
+    .card-type-sub {
+        font-size: 10px;
+        white-space: nowrap;
     }
 
-    .card-list-table{
-        overflow-x:auto;
+     .card-icon-circle {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .card-icon-circle img {
+        width: 16px !important;
     }
 
-    .card-list-table::-webkit-scrollbar{
-        display:none;
+    .view-details-link {
+        font-size: 11px;
+        white-space: nowrap;
+        margin-left: auto;
+    }
+
+    .card-list-item .d-flex.align-items-center.gap-4 {
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        padding-bottom: 2px;
+    }
+
+    .card-list-item .d-flex.align-items-center.gap-4::-webkit-scrollbar {
+        display: none;
     }
 
     /* Service */
