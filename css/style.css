@@ -1062,6 +1062,10 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
         margin-left: 0 !important;
     }
 
+    .sidebar .logo span {
+        display: none;
+    }
+
     .mobile-menu {
         display: block;
         font-size: 20px;
@@ -1085,8 +1089,10 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
 
     .mobile-search-row .search-box {
         width: 100%;
-        order: unset;
-        margin-top: 0;
+    }
+
+    .desktop-search {
+        display: none !important;
     }
 
     /* Topbar */
