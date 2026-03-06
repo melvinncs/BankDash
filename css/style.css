@@ -1044,12 +1044,29 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
         width: 100%;
     }
 
-    .content-body .row.g-4:first-child {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        padding-bottom: 10px;
+    .content-body .row.g-4:first-child{
+        display:flex;
+        flex-wrap:nowrap;
+        overflow-x:auto;
+        gap:16px;
+        padding-bottom:10px;
+        scroll-snap-type:x mandatory;
     }
-    
+
+    .content-body .row.g-4:first-child > div{
+        flex:0 0 85%;
+        max-width:85%;
+        scroll-snap-align:start;
+    }
+
+    .content-body .row.g-4:first-child::-webkit-scrollbar{
+        display:none;
+    }
+
+    .credit-card{
+        min-width:100%;
+    }
+
     .service-box {
         min-width: 220px;
     }
