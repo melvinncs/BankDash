@@ -246,6 +246,23 @@ body {
 }
 
 /* Card List Table */
+.card-list-item {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 20px 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.card-list-item .d-flex {
+    width: 100%;
+}
+
+.card-list-item .d-flex.align-items-center.gap-4 {
+    flex: 1;
+}
+
 .card-list-table {
     background: #ffffff;
     border-radius: 16px;
@@ -972,6 +989,20 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
         justify-content: center;
         padding: 10px !important;
     }
+
+    .card-list-item {
+        padding: 16px;
+    }
+    
+    .card-list-item .d-flex.align-items-center.gap-4 {
+        gap: 16px !important;
+        flex-wrap: wrap;
+    }
+    
+    .card-list-item .view-details-link {
+        margin-left: auto;
+    }
+
     .card-list-table .d-flex {
         flex-wrap: wrap;
         gap: 12px;
