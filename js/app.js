@@ -58,13 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    const saveButton = document.querySelector('.btn-save');
-    if (saveButton) {
-        saveButton.addEventListener('click', () => {
-            alert('Settings saved successfully!');
-        });
-    }
-
     const menu = document.querySelector(".mobile-menu");
     const sidebar = document.querySelector(".sidebar");
 
