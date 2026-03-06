@@ -1009,158 +1009,89 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
 }
 
 @media (max-width: 768px) {
+
     .sidebar {
         display: none;
     }
-    
+
     .mobile-menu {
         display: block;
+        font-size: 20px;
+        cursor: pointer;
+        color: #343C6A;
     }
 
-    .topbar{
-        display:grid;
-        grid-template-columns:40px 1fr 40px;
-        align-items:center;
-        padding:16px;
+    /* Topbar */
+    .topbar {
+        display: grid;
+        grid-template-columns: 40px 1fr 40px;
+        grid-template-rows: auto auto;
+        align-items: center;
+        padding: 16px;
+        gap: 12px;
     }
 
-    .topbar-icon{
-        display:none;
+    .page-title {
+        grid-column: 2;
+        grid-row: 1;
+        text-align: center;
+        font-size: 20px;
     }
-    
-    .topbar > div {
+
+    .profile-img {
+        grid-column: 3;
+        grid-row: 1;
+        justify-self: end;
+    }
+
+    .search-box {
+        grid-column: 1 / 4;
+        grid-row: 2;
         width: 100%;
-        display: flex;
-        justify-content: space-between;
+        margin-top: 6px;
     }
-    
-    .topbar .search-box {
-        order: 2;
-        grid-column: 1/4;
-        width: 100%;
-        margin-top: 10px;
-    }
-    
-    .topbar .topbar-icon {
+
+    .topbar-icon {
         display: none;
     }
-    
-    .page-title{
-        grid-column:2;
-        text-align:center;
-        font-size:20px;
+
+    /* Content Body */
+    .content-body {
+        padding: 16px;
     }
 
-    .profile-img{
-        grid-column:3;
-        justify-self:end;
-    }
-    
-    .search-box{
-        grid-column:1/4;
-        width:100%;
-        margin-top:12px;
+    .section-title {
+        font-size: 16px;
     }
 
-    .content-body section .row{
-        display:flex;
-        flex-wrap:nowrap;
-        overflow-x:auto;
-        gap:16px;
-        padding-bottom:10px;
-        scroll-snap-type:x mandatory;
+    /* Card Scroll */
+    .content-body section .row {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 16px;
+        padding-bottom: 10px;
+        scroll-snap-type: x mandatory;
     }
 
-    .content-body section .row::-webkit-scrollbar{
-        display:none;
+    .content-body section .row::-webkit-scrollbar {
+        display: none;
     }
 
-    .content-body section .row > div{
-        flex:0 0 85%;
-        max-width:85%;
-        scroll-snap-align:start;
+    .content-body section .row > div {
+        flex: 0 0 85%;
+        max-width: 85%;
+        scroll-snap-align: start;
     }
 
-    .content-body{
-        padding:16px;
-    }
-
-    .section-title{
-        font-size:16px;
-    }
-
-    .statistics-box{
-        padding:18px;
-    }
-
-    .card-list-table .d-flex{
-        flex-direction:column;
-        align-items:flex-start !important;
-        gap:10px;
-    }
-
-    .card-list-table .d-flex > div{
-        width:100%;
-    }
-
-    .view-details-link{
-        align-self:flex-end;
-    }
-
-    /* .content-body .row.g-4:first-child > div{
-        flex:0 0 85%;
-        max-width:85%;
-        scroll-snap-align:start;
-    }
-
-    .content-body .row.g-4:first-child::-webkit-scrollbar{
-        display:none;
-    } */
-
-    .credit-card{
-        min-width:100%;
-    }
-
-    .service-box {
-        min-width: 220px;
-    }
-    
     .credit-card {
         min-width: 260px;
     }
-    
+
+    /* Statistic */
     .statistics-box {
+        padding: 18px;
         margin-bottom: 20px;
-    }
-    
-    .service-row {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        padding: 16px;
-    }
-    
-    .service-left {
-        min-width: auto;
-    }
-    
-    .service-name {
-        font-size: 14px;
-    }
-    
-    .service-desc {
-        font-size: 12px;
-    }
-    
-    .service-btn {
-        border: none;
-        padding: 0;
-        font-size: 13px;
-        color: #1814F3;
-    }
-    
-    .service-col {
-        display: none;
     }
 
     /* Card List */
@@ -1169,62 +1100,101 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
         align-items: flex-start !important;
         gap: 10px;
     }
-    
+
     .card-list-table .d-flex > div {
         width: 100%;
     }
-    
+
     .view-details-link {
         align-self: flex-end;
         margin-top: 6px;
     }
-    
+
+    /* Service */
+    .service-box {
+        min-width: 220px;
+    }
+
+    .service-row {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px;
+    }
+
+    .service-left {
+        min-width: auto;
+    }
+
+    .service-name {
+        font-size: 14px;
+    }
+
+    .service-desc {
+        font-size: 12px;
+    }
+
+    .service-btn {
+        border: none;
+        padding: 0;
+        font-size: 13px;
+        color: #1814F3;
+    }
+
+    .service-col {
+        display: none;
+    }
+
+    /* Add Card */
     .add-new-card-box .row > div {
         width: 100%;
     }
-    
+
     .btn-add-card {
         width: 100%;
     }
 
+    /* Profile */
     .profile-section {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .profile-avatar {
         width: 120px;
         height: 120px;
     }
-    
+
     .profile-form {
         width: 100%;
     }
-    
+
     .profile-form input {
         font-size: 13px;
     }
-    
+
     .btn-save {
         width: 100%;
         margin-top: 20px;
     }
 
+    /* Preference */
     .pref-item {
         flex-direction: column;
         align-items: flex-start;
         gap: 12px;
     }
-    
+
     .select-input {
         width: 100%;
     }
 
+    /* Security */
     .security-item {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     .password-field {
         width: 100%;
     }
@@ -1234,7 +1204,7 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
         overflow-x: auto;
         padding-bottom: 10px;
     }
-    
+
     .setting-tab {
         white-space: nowrap;
         font-size: 14px;
