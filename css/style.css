@@ -1062,6 +1062,18 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
         margin-left: 0 !important;
     }
 
+    .sidebar.show .logo span {
+        display: inline !important;
+    }
+
+    .sidebar.show .nav-link span {
+        display: inline !important;
+    }
+
+    .sidebar.show .nav-link {
+        justify-content: flex-start !important;
+    }
+
     .mobile-menu {
         display: block;
         font-size: 20px;
