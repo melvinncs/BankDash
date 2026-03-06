@@ -1261,6 +1261,30 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
         min-width: 220px;
     }
 
+    .service-top-cards {
+        display: flex;
+        flex-wrap: nowrap !important;
+        overflow-x: auto;
+        gap: 16px;
+        padding-bottom: 10px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .service-top-cards::-webkit-scrollbar {
+        display: none;
+    }
+
+    .service-top-cards > div {
+        flex: 0 0 75% !important;
+        max-width: 75% !important;
+        scroll-snap-align: start;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
     .service-row {
         flex-direction: row;
         align-items: center;
