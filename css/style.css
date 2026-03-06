@@ -1017,11 +1017,15 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
         display: block;
     }
 
-    .topbar {
-        display: grid;
-        grid-template-columns: 40px 1fr 40px;
-        align-items: center;
-        gap: 0;
+    .topbar{
+        display:grid;
+        grid-template-columns:40px 1fr 40px;
+        align-items:center;
+        padding:16px;
+    }
+
+    .topbar-icon{
+        display:none;
     }
     
     .topbar > div {
@@ -1041,16 +1045,24 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
         display: none;
     }
     
-    .page-title {
-        text-align: center;
-        font-size: 18px;
-    }
-    
-    .search-box {
-        width: 100%;
+    .page-title{
+        grid-column:2;
+        text-align:center;
+        font-size:20px;
     }
 
-    .content-body .row.g-4:first-child{
+    .profile-img{
+        grid-column:3;
+        justify-self:end;
+    }
+    
+    .search-box{
+        grid-column:1/4;
+        width:100%;
+        margin-top:12px;
+    }
+
+    .content-body section .row{
         display:flex;
         flex-wrap:nowrap;
         overflow-x:auto;
@@ -1059,7 +1071,43 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
         scroll-snap-type:x mandatory;
     }
 
-    .content-body .row.g-4:first-child > div{
+    .content-body section .row::-webkit-scrollbar{
+        display:none;
+    }
+
+    .content-body section .row > div{
+        flex:0 0 85%;
+        max-width:85%;
+        scroll-snap-align:start;
+    }
+
+    .content-body{
+        padding:16px;
+    }
+
+    .section-title{
+        font-size:16px;
+    }
+
+    .statistics-box{
+        padding:18px;
+    }
+
+    .card-list-table .d-flex{
+        flex-direction:column;
+        align-items:flex-start !important;
+        gap:10px;
+    }
+
+    .card-list-table .d-flex > div{
+        width:100%;
+    }
+
+    .view-details-link{
+        align-self:flex-end;
+    }
+
+    /* .content-body .row.g-4:first-child > div{
         flex:0 0 85%;
         max-width:85%;
         scroll-snap-align:start;
@@ -1067,7 +1115,7 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
 
     .content-body .row.g-4:first-child::-webkit-scrollbar{
         display:none;
-    }
+    } */
 
     .credit-card{
         min-width:100%;
