@@ -1096,7 +1096,11 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
     }
 
     /* Topbar */
-        .topbar > div:first-child {
+    .topbar-icon {
+        display: none;
+    }
+
+    .topbar > div:first-child {
         display: flex;
         align-items: center;
         justify-content: space-between;
