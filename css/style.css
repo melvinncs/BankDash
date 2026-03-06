@@ -1051,10 +1051,12 @@ filter: brightness(0) saturate(100%) invert(77%) sepia(58%) saturate(590%) hue-r
         height:100vh;
         z-index:1000;
         transition:0.3s;
+        width: 260px;
     }
 
     .sidebar.show{
         left:0;
+        width: 260px !important;
     }
 
     .sidebar .logo {
